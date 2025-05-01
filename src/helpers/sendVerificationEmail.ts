@@ -11,7 +11,7 @@ export async function sendVerificationEmail(
 ): Promise<ApiResponse> {
   try {
     const response = await resend.emails.send({
-      from: "no-reply@mysteryauth.com", // ✅ Use a verified email from Resend
+      from: "no-reply@mysteryauth.com", 
       to: email,
       subject: "Mystery Message Verification Code",
       react: VerificationEmail({ username, otp: verifyCode }),
